@@ -67,11 +67,11 @@ const TariffSelectionForm = () => {
         <Checkbox />
         <p className={styles.agreement}>
           Я&nbsp;соглашаюсь с&nbsp;
-          <Link to={'/rules'} className={styles.link} target="_blank">
+          <Link to={'/rules'} className={styles.link}>
             Правилами&nbsp;сервиса
           </Link>{' '}
           и&nbsp;условиями{' '}
-          <Link to={'/legal'} className={styles.link} target="_blank">
+          <Link to={'/legal'} className={styles.link}>
             Публичной&nbsp;оферты
           </Link>
           .
