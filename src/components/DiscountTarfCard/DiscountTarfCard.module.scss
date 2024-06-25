@@ -1,0 +1,134 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 210px;
+  padding: 24px;
+
+  background-color: var(--background-color-white);
+  border: 2px solid var(--gray-font);
+  border-radius: 20px;
+}
+
+.selected {
+  background-color: var(--background-color-selected);
+  border: 2px solid var(--light-green);
+
+  & .round {
+    border: 2px solid var(--light-green);
+    border-radius: 50%;
+  }
+
+  & .round::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--light-green);
+  }
+}
+
+.name {
+  margin-bottom: 12px;
+  font-family: 'Bebas Neue Cyr', Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  line-height: 1;
+  color: var(--tarif-name-color);
+}
+
+.upperBlock {
+  width: 100%;
+  font-family: var(--font-family-main);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--card-line-color);
+}
+
+.discountPrice {
+  position: relative;
+  font-size: 46px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--main-text-color);
+
+  &:after {
+    content: '\20BD';
+  }
+}
+
+.standartPrice {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--old-price-color);
+
+  &:after {
+    content: '\20BD';
+  }
+}
+
+.cross {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text {
+  font-family: var(----font-family-main);
+  text-align: center;
+}
+
+.modalStar {
+  position: absolute;
+  top: -15px;
+  right: 0px;
+  transform: translateX(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+}
+
+.round {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--radio-color);
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .round {
+    width: 20px;
+    height: 20px;
+  }
+
+  .selected {
+    & .round::after {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .modalStar {
+    width: 40px;
+    height: 40px;
+  }
+}

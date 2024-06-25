@@ -1,0 +1,60 @@
+.button {
+  padding: 28px 100px;
+  border-radius: 60px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--orange);
+  outline: none;
+  border: 0;
+  cursor: pointer;
+
+  transition: all 0.3s 0.1s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    cursor: auto;
+    opacity: 0.7;
+  }
+}
+
+.blink {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 2, 0, 1);
+  animation-duration: 1s;
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 2, 0, 1);
+  -webkit-animation-duration: 1s;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .button {
+    width: 100%;
+    font-weight: 500;
+  }
+}

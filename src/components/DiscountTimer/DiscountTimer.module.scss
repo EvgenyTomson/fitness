@@ -1,0 +1,72 @@
+.timer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  color: black;
+}
+
+.timeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time {
+  font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: var(--light-green);
+  text-transform: uppercase;
+}
+
+.warning {
+  color: var(--orange);
+}
+
+.discription {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-m);
+  color: var(--gray-font);
+  text-transform: lowercase;
+}
+
+.blink {
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 2, 0, 1);
+  animation-duration: 1s;
+  -webkit-animation-name: blinker;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: cubic-bezier(1, 2, 0, 1);
+  -webkit-animation-duration: 1s;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .time {
+    font-size: 40px;
+  }
+
+  .discription {
+    font-size: 14px;
+  }
+}

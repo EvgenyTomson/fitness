@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  background-color: var(--background-color-white);
+  z-index: 2;
+}
+
+.title {
+  font-family: var(--font-family-main);
+  font-size: 30px;
+  line-height: var(--font-line-m);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 690px) {
+  .header {
+    padding: 13px 0;
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

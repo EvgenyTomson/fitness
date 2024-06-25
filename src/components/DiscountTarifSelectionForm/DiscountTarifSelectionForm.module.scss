@@ -1,0 +1,58 @@
+.form {
+  width: 100%;
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarifs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 12px;
+  margin-bottom: 40px;
+}
+
+.text {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+
+.accept {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.agreement {
+  margin-top: 3px;
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--gray-font);
+}
+
+.textLow {
+  margin-top: 30px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--gray-font);
+  max-width: 95%;
+}
+
+.modalButton.extra {
+  padding: 20px 42px;
+  border-radius: 30px;
+  align-self: center;
+  text-transform: none;
+}
+
+@media screen and (max-width: 800px) {
+  .tarifs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}

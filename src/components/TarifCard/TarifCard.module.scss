@@ -1,0 +1,99 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 187px;
+  padding: 45px 18px 26px;
+
+  background-color: var(--background-color-white);
+  border: 2px solid var(--gray-font);
+  border-radius: 20px;
+}
+
+.card:last-child {
+  flex-direction: row;
+  gap: 18px;
+  padding: 24px 52px 25px 30px;
+  grid-column: span 3;
+  max-width: 100%;
+
+  & .prices {
+    margin-right: 12px;
+  }
+}
+
+.selected {
+  background-color: var(--background-color-selected);
+  border: 2px solid var(--light-green);
+}
+
+.name {
+  margin-bottom: 21px;
+  font-family: 'Bebas Neue Cyr', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--tarif-name-color);
+  white-space: nowrap;
+}
+
+.prices {
+  margin-bottom: 18px;
+  font-family: var(--font-family-main);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.discountPrice {
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--main-text-color);
+
+  &:after {
+    content: '\20BD';
+  }
+}
+
+.standartPrice {
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--old-price-color);
+  text-decoration: line-through;
+
+  &:after {
+    content: '\20BD';
+  }
+}
+
+.text {
+  max-width: 70%;
+  font-family: var(----font-family-main);
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .card:last-child {
+    padding: 45px 18px 26px;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .card {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 20px;
+    grid-column: span 3;
+  }
+
+  .card:last-child {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+}

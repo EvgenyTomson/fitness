@@ -1,0 +1,108 @@
+.modal {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 750px;
+  width: 100%;
+  padding: 60px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--font-family-main);
+  text-align: left;
+  background-color: var(--background-gray);
+  overflow-y: auto;
+}
+
+.hot {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  display: block;
+  padding: 4px 10px;
+  font-size: 16px;
+  color: #fff;
+  text-transform: lowercase;
+  background-color: var(--light-green);
+}
+
+.title {
+  margin-bottom: 30px;
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #12191d;
+}
+
+.titleGreen {
+  color: var(--light-green);
+}
+
+.discount {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  font-size: 24px;
+}
+
+.text {
+  font-size: 24px;
+}
+
+.textDark {
+  font-weight: 700;
+  color: #12191d;
+}
+
+.textСircled {
+  padding: 12px 30px;
+  font-weight: 700;
+  border: 2px solid var(--light-green);
+  border-radius: 30px;
+}
+
+.textGreen {
+  color: var(--light-green);
+}
+
+.prepare {
+  align-self: flex-start;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+  .modal {
+    max-width: 90%;
+    padding: 50px 20px 20px;
+  }
+
+  .hot {
+    font-size: 14px;
+  }
+
+  .title {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .textСircled {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+
+  .prepare {
+    font-size: 15px;
+    text-align: center;
+  }
+}
